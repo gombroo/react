@@ -1,8 +1,15 @@
 import React from 'react';
 import styles from './Column.scss';
+import Creator from '../Creator/Creator';
 import PropTypes from 'prop-types';
 
+
+
 class Column extends React.Component {
+  state = {
+    cards: this.props.cards || [],
+  }
+
   static propTypes = {
     title: PropTypes.node.isRequired,
   }
