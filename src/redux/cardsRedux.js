@@ -2,8 +2,7 @@ import shortid from 'shortid';
 
 // selectors
 export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
-// eslint-disable-next-line no-undef
-export const getAllCardsForSearchResults = ({cards}, listId) => cards.filter(card => card.listId == listId && new RegExp(searchString, 'i').test(card.title));
+export const getCardsForSearchResults = ({cards}, searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title));
 
 // action name creator
 const reducerName = 'cards';

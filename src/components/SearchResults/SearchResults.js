@@ -4,14 +4,13 @@ import styles from './SearchResults.scss';
 import Card from '../Card/Card';
 
 class SearchResults extends React.Component {
-
   static propTypes = {
-    title: PropTypes.node.isRequired,
+    title: PropTypes.node,
     cards: PropTypes.array,
-  }
+  };
 
   render() {
-    const {title, cards} = this.props;
+    const {cards, title} = this.props;
 
     return (
       <section className={styles.component}>
@@ -23,9 +22,9 @@ class SearchResults extends React.Component {
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-      </section>      
+      </section>
     );
-  }  
+  }
 }
 
 export default SearchResults;
