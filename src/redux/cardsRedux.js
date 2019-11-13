@@ -1,6 +1,6 @@
 import shortid from 'shortid';
 
-// selectorsgit
+// selectors
 export const getCardsForColumn = ({cards}, columnId) => cards.filter(card => card.columnId == columnId);
 export const getCardsForSearchResults = ({cards}, searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title));
 

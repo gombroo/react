@@ -8,7 +8,8 @@ import Faq from '../Faq/Faq';
 import MainLayout from '../MainLayout/MainLayout';
 import List from '../List/ListContainer';
 import styles from './App.scss';
-import SearchResults from '../SearchResults/SearchResults';
+// import SearchResults from '../SearchResults/SearchResults';
+import SearchResultsContainer from '../SearchResults/SearchResultsContainer';
 
 const App = () => (
   <BrowserRouter>
@@ -22,7 +23,7 @@ const App = () => (
         <Route exact path="/info" component={Info} />
         <Route exact path="/faq" component={Faq} />
         <Route exact path="/list/:id" component={List} />
-        <Route exact path="/search/:filter" component={SearchResults} />
+        <Route exact path="/search/:filter" component={SearchResultsContainer} />
       </AnimatedSwitch>
     </MainLayout>
   </BrowserRouter>
